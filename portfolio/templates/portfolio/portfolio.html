@@ -1,0 +1,10 @@
+{% extends "portfolio/layout.html"%}
+
+
+{% block content %}
+	{% for item in data %}
+	<p>{{item.name}}</p>
+	<p>{{item.age}}	</p>
+	{% endfor %}
+{% endblock content %}
+
