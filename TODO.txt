@@ -1,0 +1,14 @@
+### TODO ###
+
+#General
+Complete About page
+Complete Blog page(maybe remove it)
+
+#HTML
+Change github repository template 
+
+#Python
+Integrate simple neural network for MNIST and
+canvas with predict.
+
+

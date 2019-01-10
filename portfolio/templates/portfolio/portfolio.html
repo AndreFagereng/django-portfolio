@@ -2,9 +2,39 @@
 
 
 {% block content %}
-	{% for item in data %}
-	<p>{{item.name}}</p>
-	<p>{{item.age}}	</p>
-	{% endfor %}
-{% endblock content %}
 
+{% for item in data%}
+<div style="margin-top: 50px" class="row">
+  <div class="span12">
+    <div class="row">
+      <div class="span8">
+        <h4><strong>{{item.name}}</strong></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span2">
+        <a href="#" class="thumbnail">
+            <img src="https://www.xda-developers.com/files/2016/02/github-mark.png" alt="" style="width:260px">
+        </a>
+      </div>
+      <div class="span10">      
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span8">
+        <p></p>
+        <p>
+          <i class="icon-user"></i> by <a href="{% url 'portfolio-about'%}">Andre</a> 
+          <i class="icon-tags"></i> Tags : 
+          <span class="badge badge-pill badge-danger">{{item.language}}</span>
+          <a class="btn" href="{{item.html_url}}">View on Github</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+{% endfor %}
+
+{% endblock content %}
